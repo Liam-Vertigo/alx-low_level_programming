@@ -1,39 +1,41 @@
-ii#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include <stdio.h>
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * main - prints out all possible combos of 3 digits
+ * Return: 0
  */
-
 int main(void)
 {
-	int d, p, q;
 
-	for (d = '0'; d < '9'; d++)
+	int i, j, k;
+
+	for (i = 48; i < 58; i++)
 	{
-		for (p = d + 1; p <= '9'; p++)
+		for (j = i; j < 58; j++)
 		{
-			for (q = p + 1; q <= '9'; q++)
+			for (k = j; k < 58; k++)
 			{
-				if ((p != d) != q)
+				if (i == j || j == k || i == k)
 				{
-					putchar(d);
-					putchar(p);
-					putchar(q);
+					continue;
+				}
+				putchar(i);
+				putchar(j);
+				putchar(k);
 
-					if (d == '7' && p == '8')
-						continue;
-
+				if (i == 55 && j == 56 && k == 57)
+				{
+					break;
+				}
+				else
+				{
 					putchar(',');
 					putchar(' ');
 				}
+
 			}
 		}
 	}
 	putchar('\n');
-
 	return (0);
 }
