@@ -1,20 +1,3 @@
-
-zeus-kronos
-/
-alx-low_level_programming
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-alx-low_level_programming/0x0B-malloc_free/0-create_array.c
-@zeus-kronos
-zeus-kronos Create 0-create_array.c
- 1 contributor
-34 lines (26 sloc)  558 Bytes
 #include <stdlib.h>
 
 /**
